@@ -8,8 +8,10 @@ import lombok.val;
 import org.apache.commons.configuration2.BaseConfiguration;
 import org.apache.commons.configuration2.Configuration;
 
+import static com.xatkit.dsl.DSL.eventIs;
 import static com.xatkit.dsl.DSL.fallbackState;
 import static com.xatkit.dsl.DSL.intent;
+import static com.xatkit.dsl.DSL.intentIs;
 import static com.xatkit.dsl.DSL.model;
 import static com.xatkit.dsl.DSL.state;
 
@@ -111,7 +113,7 @@ public class GreetingsBot {
                      * ReactEventProvider. The list of events defined in a provider is available in the provider's
                      * wiki page.
                      */
-                    .when().eventIs(ReactEventProvider.ClientReady).moveTo(awaitingInput);
+                    .when(eventIs(ReactEventProvider.ClientReady)).moveTo(awaitingInput);
 
         awaitingInput
                 .next()
@@ -126,8 +128,8 @@ public class GreetingsBot {
                      * }
                      * </pre>
                      */
-                    .when().intentIs(greetings).moveTo(handleWelcome)
-                    .when().intentIs(howAreYou).moveTo(handleWhatsUp);
+                    .when(intentIs(greetings)).moveTo(handleWelcome)
+                    .when(intentIs(howAreYou)).moveTo(handleWhatsUp);
 
         handleWelcome
                 .body(context -> reactPlatform.reply(context, "Hi, nice to meet you!"))
