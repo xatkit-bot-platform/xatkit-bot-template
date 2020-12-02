@@ -18,7 +18,7 @@ Finally, we put an example _GreetingsBot_ in this template to help you find the 
 
 **Note:** you can remove the Xatkit Chat Platform and Xatkit React Platform dependencies if you don't need them, but they are required to run the _GreetingsBot_ example.
 
-In addition, this template also includes a Dockerfile you can customize to deploy your bot as a [Docker container](##docker).
+In addition, this template also includes a Dockerfile you can customize to deploy your bot as a [Docker container](#docker).
 
 ## How to use the template?
 Click on the button below to create a new repository from this template and follow the instructions.
