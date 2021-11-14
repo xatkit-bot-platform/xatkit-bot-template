@@ -14,6 +14,7 @@ We also configured a few testing dependencies we regularly use in our bots:
 - JUnit 4.12
 - AssertJ 3.14
 - Mockito 3.3.3
+
 Finally, we put an example _GreetingsBot_ in this template to help you find the API method you need to create, configure, and run your bot. You can find more information on the API in our [wiki](https://github.com/xatkit-bot-platform/xatkit/wiki).
 
 **Note:** you can remove the Xatkit Chat Platform and Xatkit React Platform dependencies if you don't need them, but they are required to run the _GreetingsBot_ example.
