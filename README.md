@@ -101,5 +101,6 @@ CMD java -jar bot.jar
 
 - IntelliJ error: `java: incompatible types: com.xatkit.dsl.intent.IntentOptionalTrainingSentenceStep cannot be converted to lombok.val` ➡ You need to enable annotation processing in your project (see image below).
 ![Enable annotation processing in IntelliJ](docs/img/enable_annotation_processing_intellij.png)
+And if you still get issues, you can also try to indicate *LATEST* as the lombok version to import in the pom file.
 
 
